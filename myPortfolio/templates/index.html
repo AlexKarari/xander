@@ -1,6 +1,21 @@
 {%extends 'all/base.html'%} 
 {% block content %} 
 {{bock.super}}
+<section class="header">
+    <div>
+        <img src="media/avatar/bg-portfolio.jpg" alt="bg-image">
+    </div>
+
+</section>
+
+<section class="services">
+    <h3>My Services</h3>
+    <div>
+
+    </div>
+
+</section>
+
 <section class="about">
 <div class="container">
     {% for image_item in image %}
@@ -18,6 +33,10 @@
 </div>
 </section> 
 
+<section class="skills">
+
+</section>
+
 <section class="projects">
 <div class="container">
     {% for project_item in project %}
@@ -29,6 +48,10 @@
     </div>
     {% endfor %}
 </div>
+</section>
+
+<section class="contact">
+
 </section>
 
 {% endblock %}

@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 class Image(models.Model):
-    about = models.CharField(max_length=10000)
     my_image = models.ImageField(upload_to='avatar/')
 
 
