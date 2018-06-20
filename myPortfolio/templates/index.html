@@ -1,13 +1,14 @@
 {%extends 'all/base.html'%} 
-{% block content %} 
+{% block content %}
+{% load static %} 
 {{bock.super}}
 <section class="header">
     <div class="container">
-        <h2>Welcome to</h2>
+        <h2>I'M</h2>
         <br>
-        <h1>ALEXANDER'S PORTFOLIO</h1>
+        <h1>ALEXANDER KARARI</h1>
         <br>
-        <h3>The best choice for your desired Fullstack Developer</h3>
+        <h3>Your best and desired choice for a Fullstack Web Developer</h3>
     </div>
 </section>
 
@@ -16,12 +17,12 @@
     <!-- displaying About me section -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <h2> Legally, I'm Alexander.</h2>
-        <h3>Otherwise, Xander it is.</h3>
+        <h3>Otherwise, Xander it is <i class="fas fa-smile"></i></h3>
         <br>
         <h4>Hey there, meet this budding twenty five year old developer from Nairobi.
         I'm a graduate who holds a second class upper division degree in Business & Information Technology from Jomo Kenyatta University
-        of Agriculture and Technology (JKUAT) Passion to solve day to day problems drives me. <br><br>I believe everything should be automated
-        given the fast paced and evolving tech werl we are currently in. Developing easy, yet challenging, intuitive and beautiful
+        of Agriculture and Technology (JKUAT) <br> Passion to solve day to day problems drives me. <br><br>I believe everything should be automated
+        given the fast paced and evolving tech world we are currently in.<br> Developing easy, yet challenging, intuitive and beautiful
         products is my key goal. </h4>
     </div>
     {% for image_item in image %}
@@ -39,46 +40,58 @@
     <div>
         <h2>MY SKILLS</h2>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h3>My zeal is not defined by my skill</h3>
-            <br>
-            <h4>My skilfulness has been acquired over the years with my onset to programming in university.</h4>
-            <br>
-            <h4>This has been advanced through my 6 months study at one of the arguably best schools in Africa for software developers: Moringa School, Nairobi.</h4>
-        </div>
-        <div class="col-md-8">
-            <img src="media/avatar/html.png" alt="html logo">
-            <img src="media/avatar/django.png" alt="django logo">
-            <img src="media/avatar/flask.png" alt="flask logo">
-            <img src="media/avatar/python.png" alt="python logo">
-            <img src="media/avatar/css.png" alt="css logo">
-            <img src="media/avatar/angular.png" alt="angular 5 logo">
-
-
-        </div>
-
+    <div>
+        <h3>My zeal is not defined by my skill</h3>
+        <br>
+        <h4>My skilfulness has been acquired over the years with my onset to programming in university.</h4>
+        <br>
+        <h4>This has then been advanced through my 4 months study at one of Africa's arguably best coding bootcamp schools for software developers: Moringa School, Nairobi, after a four year hiatus from coding.</h4>
+        
     </div>
-
+    <div class="container imagez">
+        <img style="height: 220px; width:215px" src=" media/avatar/htmlcss.png " alt="html/css logo ">
+        <img style="height: 220px; width:215px" src="media/avatar/dj.png" alt="django logo" style="size: 100px">
+        <img style="height: 220px; width:215px" src="media/avatar/fl.png" alt="flask logo">
+        <img style="height: 220px; width:215px" src="media/avatar/python.png" alt="python logo">
+        <img style="height: 220px; width:215px" src="media/avatar/ang.png" alt="angular 5 logo">
+    </div>
 </section>
 
 <section class="projects">
     <h2>MY WORKS</h2>
     <!-- displaying my best projects so far -->
-<div class="container">
-    {% for project in project %}
-    <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{project.project_name}} </div>
-                <div class="panel-body">{{project.description}}</div>
-                <div class="panel-footer">{{project.link}}</div>
+    <div class="container">
+        <div class="row">
+            <div style="width: 33%" ="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" style="height: 250px; width:350px" src="media/avatar/blog.png" alt="blog">
+                    <div class="overlay">
+                        
+                        <a href="https://bloggeralex.herokuapp.com/" target="_blank"><h2>Personal Blog</h2></a>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 33%" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" style="height: 250px; width:350px" src="media/avatar/gallery.png" alt="gallery">
+                    <div class="overlay">
+                        
+                        <a href="https://lexgallery.herokuapp.com/" target="_blank"><h2>Gallery</h2></a>
+
+                    </div>
+                </div>
+            </div>
+            <div style="width: 33%"class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" style="height: 250px; width:350px" src="media/avatar/github.png" alt="github">
+                    <div class="overlay">
+                        
+                        <a href="https://alexkarari.github.io/Github-project/record" target="_blank"><h2>Github Search</h2></a>
+                    </div>
+                </div>
             </div>
         </div>
-        {% endfor %}
     </div>
-    
-</div>
 </section>
 
 <section class="contact">
@@ -89,13 +102,13 @@
         <div class="icons">
             <div class="row">
                 <div class="col-md-2 col-md-offset-2">
-                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/alexanderkarari/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <div class="col-md-2 col-md-offset-2">
-                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/AlexKarari" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="col-md-2 col-md-offset-2">
-                    <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com/Sir_lexander" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
